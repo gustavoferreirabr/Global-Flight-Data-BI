@@ -48,12 +48,8 @@ O painel principal centraliza os seguintes KPIs estratégicos:
 
 ```text
 
-🚀 Como Executar o Projeto
-Certifique-se de ter o Microsoft Power BI Desktop instalado em sua máquina.
+🚀 Como Executar o Projeto:
 
-Clone este repositório ou faça o download do arquivo Global Flight Data BI.pbix.
-
-Abra o arquivo no Power BI Desktop e explore as páginas, filtros interativos e códigos DAX na aba de modelagem.
-
-👨‍💻 Autor
-Desenvolvido por [Seu Nome]. Se gostou do projeto, sinta-se à vontade para se conectar comigo no LinkedIn e deixar uma ⭐ no repositório!
+1. Certifique-se de ter o Microsoft Power BI Desktop instalado em sua máquina.
+2. Clone este repositório ou faça o download do arquivo Global Flight Data BI.pbix.
+3. Abra o arquivo no Power BI Desktop e explore as páginas, filtros interativos e códigos DAX na aba de modelagem.
