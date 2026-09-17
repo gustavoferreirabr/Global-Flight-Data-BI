@@ -41,7 +41,8 @@ O painel principal centraliza os seguintes KPIs estratégicos:
 
 ---
 
-## 🖼️ Pré-visualização do Dashboard
+## 🖼️ Pré-visualização do Dashboard e Arquitetura dos Dados
+<img width="954" height="536" alt="image" src="https://github.com/user-attachments/assets/cc2ef123-7841-4b3e-bda3-cea1fe043856" />
 <img width="1218" height="542" alt="image" src="https://github.com/user-attachments/assets/f468efb2-868a-40f1-8533-85d809abc763" />
 
 
