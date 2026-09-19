@@ -33,8 +33,7 @@ O projeto segue rigorosamente as boas práticas de modelagem dimensional de Kimb
 ---
 
 ## 📈 Principais Indicadores e Métricas (KPIs)
-O painel principal centraliza os seguintes KPIs estratégicos:
-* **Faturamento T
+
 
 ---
 
