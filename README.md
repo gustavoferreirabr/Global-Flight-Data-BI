@@ -34,10 +34,7 @@ O projeto segue rigorosamente as boas práticas de modelagem dimensional de Kimb
 
 ## 📈 Principais Indicadores e Métricas (KPIs)
 O painel principal centraliza os seguintes KPIs estratégicos:
-* **Faturamento Total (BRL):** Receita bruta acumulada das operações.
-* **Volume de Vendas & Bilhetes:** Quantidade total de transações e assentos comercializados.
-* **Ticket Médio:** Valor médio gerado por bilhete/transação.
-* **Indicadores de Variação (Growth MoM/YoY):** Análise comparativa de crescimento dos principais indicadores de negócio.
+* **Faturamento T
 
 ---
 
