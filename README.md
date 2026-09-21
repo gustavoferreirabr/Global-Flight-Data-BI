@@ -1,54 +1,299 @@
-# ✈️ Global Flight Data Analytics | Power BI Portfolio
+# ✈️ Global Flight Data BI
 
-<div align="center">
+### Dashboard de Vendas Aéreas desenvolvido com Power BI
 
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![DAX](https://img.shields.io/badge/DAX-207245?style=for-the-badge&logo=microsoft&logoColor=white)
-![Star Schema](https://img.shields.io/badge/Architecture-Star%20Schema-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+Projeto de **Business Intelligence** desenvolvido para transformar dados de vendas de passagens aéreas em informações visuais para análise de desempenho e apoio à tomada de decisão.
 
-</div>
+O projeto foi desenvolvido do zero, aplicando conceitos de **modelagem dimensional, Star Schema, Power Query, DAX, indicadores de desempenho, análise temporal e visualização de dados**.
 
----
-
-## 📌 Sobre o Projeto
-O **Global Flight Data Analytics** é uma solução completa de inteligência de negócios projetada para monitorar e analisar o desempenho de vendas de passagens aéreas globais. O projeto simula um ambiente corporativo real, respondendo a perguntas cruciais de negócio como: *Qual o faturamento por rota e companhia aérea? Quais são os produtos mais rentáveis? Qual o comportamento do ticket médio e o volume de vendas ao longo do tempo?*
+> 🔗 **[Acessar Dashboard Online](https://app.powerbi.com/view?r=eyJrIjoiYWU5MDQ0ODctYWE2Yy00NTI3LTg4OGEtMDRhOWM5ODQ0NjgzIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)**
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
-* **Power BI & Power Query (Linguagem M):** Extração, transformação de dados (ETL), limpeza e tratamento de tipos.
-* **Modelagem Dimensional (Star Schema):** Organização estruturada em tabelas Fato e Dimensões para garantir alta performance e escalabilidade de consultas.
-* **DAX Avançado (Data Analysis Expressions):** Criação de medidas calculadas dinâmicas para análise de faturamento, bilhetes vendidos, ticket médio e indicadores de variação percentual.
-* **Figma / UI Design:** Criação de um layout e background customizados e profissionais, focados em *Data Storytelling* e experiência do usuário (UX).
+## 📊 Dashboard
+
+<p align="center">
+<img width="863" height="482" alt="image" src="https://github.com/user-attachments/assets/989b1ba8-b343-4189-a807-abe42ac6fb59" />
+<img width="865" height="477" alt="image" src="https://github.com/user-attachments/assets/09743534-4165-48e5-bcee-ed02d095f2f8" />
+<img width="866" height="481" alt="image" src="https://github.com/user-attachments/assets/3dcd4cac-41e5-4efb-905b-6fcb5cb57306" />
+<img width="862" height="485" alt="image" src="https://github.com/user-attachments/assets/a252c813-42e1-4cca-ae22-9f4778a0eda3" />
+
+</p>
+
+> *Imagem ilustrativa do dashboard. Os arquivos das páginas podem ser encontrados na pasta **`assets`** do projeto.*
 
 ---
 
-## 📐 Arquitetura de Dados & Modelagem
-O projeto segue rigorosamente as boas práticas de modelagem dimensional de Kimball:
-1. **Tabela Fato (`Fato_Vendas`):** Contém as transações detalhadas de vendas, chaves estrangeiras e métricas quantitativas.
-2. **Tabelas de Dimensão (`Dim_Produtos`, `Dim_Companhias`, `Dim_Rotas`, `Dim_Clientes`):** Contextualizam os dados transacionais (classes de voos, alianças aéreas, origens/destinos IATA e perfis de clientes).
-3. **Tabela Calendário Dinâmica:** Desenvolvida via Power Query com atualização automática baseada na data atual do sistema, garantindo suporte completo a inteligência de tempo (*Time Intelligence*).
+## 🎯 Objetivo
+
+O objetivo do projeto é utilizar dados de vendas aéreas para responder perguntas de negócio relacionadas a **faturamento, vendas, ticket médio, rotas, companhias aéreas e classes de passagem**.
+
+### Business Questions
+
+* Qual é o faturamento total e como ele evolui ao longo do período?
+* Qual é o ticket médio das vendas?
+* Quais rotas apresentam maior volume de vendas?
+* Quais companhias aéreas concentram maior faturamento?
+* Como o faturamento se distribui entre as diferentes classes?
+* Como os principais indicadores se comportam em comparação ao período anterior?
+* Quais rotas e companhias apresentam maior participação nas vendas?
 
 ---
 
-## 📈 Principais Indicadores e Métricas (KPIs)
+## 🏗️ Arquitetura do projeto
 
-
----
-
-## 🖼️ Pré-visualização do Dashboard e Arquitetura dos Dados
-<img width="949" height="532" alt="image" src="https://github.com/user-attachments/assets/c5292e9b-11de-48a7-a23e-149ade5217a6" />
-<img width="954" height="536" alt="image" src="https://github.com/user-attachments/assets/cc2ef123-7841-4b3e-bda3-cea1fe043856" />
-<img width="957" height="534" alt="image" src="https://github.com/user-attachments/assets/8f92df93-4f05-4f1e-b334-f6fbeea1161d" />
-<img width="952" height="538" alt="image" src="https://github.com/user-attachments/assets/d4c0f0a9-71c3-41fa-bd75-315cb2160c68" />
-
-
+O projeto foi estruturado em diferentes camadas, separando o tratamento dos dados, o modelo semântico, as regras de negócio e a visualização.
 
 ```text
+Fonte de dados
+      ↓
+Power Query
+      ↓
+Modelo Dimensional
+(Star Schema)
+      ↓
+Medidas DAX
+      ↓
+Dashboard / Visualização
+```
 
-🚀 Como Executar o Projeto:
+### Camadas
 
-1. Certifique-se de ter o Microsoft Power BI Desktop instalado em sua máquina.
-2. Clone este repositório ou faça o download do arquivo Global Flight Data BI.pbix.
-3. Abra o arquivo no Power BI Desktop e explore as páginas, filtros interativos e códigos DAX na aba de modelagem.
+| Camada               | Aplicação                                                            |
+| -------------------- | -------------------------------------------------------------------- |
+| **Fonte de dados**   | Dados de vendas de passagens, clientes, companhias, rotas e produtos |
+| **Tratamento**       | Limpeza, transformação e padronização utilizando Power Query         |
+| **Modelo semântico** | Estrutura dimensional baseada em Star Schema                         |
+| **Medidas**          | Regras de negócio e indicadores desenvolvidos em DAX                 |
+| **Visualização**     | Dashboard interativo com KPIs, filtros e análises comparativas       |
+
+---
+
+## ⭐ Modelo de dados — Star Schema
+
+O modelo utiliza uma estrutura de **Star Schema**, com uma tabela fato central relacionada a dimensões descritivas.
+
+Essa estrutura favorece a organização do modelo, a previsibilidade dos filtros e a criação de medidas DAX mais simples e reutilizáveis.
+
+### Estrutura
+
+| Tipo            | Tabela           | Descrição                                        |
+| --------------- | ---------------- | ------------------------------------------------ |
+| 🟢 **Fato**     | `Fato_Vendas`    | Transações de venda de passagens                 |
+| 🔵 **Dimensão** | `Dim_Clientes`   | Informações dos clientes                         |
+| 🔵 **Dimensão** | `Dim_Companhias` | Companhias aéreas                                |
+| 🔵 **Dimensão** | `Dim_Produtos`   | Produtos e classes das passagens                 |
+| 🔵 **Dimensão** | `Dim_Rotas`      | Rotas e informações relacionadas                 |
+| 🔵 **Dimensão** | `Calendario`     | Estrutura para análises temporais                |
+| ⚙️ **Suporte**  | `Medidas`        | Tabela dedicada ao armazenamento das medidas DAX |
+
+### Diagrama
+
+<p align="center">
+<img width="1073" height="480" alt="image" src="https://github.com/user-attachments/assets/bd44eb40-01ea-474a-9a5d-3c36cf928f87" />
+
+</p>
+
+---
+
+## 📐 Medidas DAX
+
+As medidas foram centralizadas em uma tabela específica chamada `Medidas`, separando as regras de negócio das tabelas de dados.
+
+### Indicadores principais
+
+* `Faturamento Total (BRL)`
+* `Qntd de Vendas`
+* `Qntd de Bilhetes Vendidos`
+* `Ticket Medio`
+
+### Comparativos de período
+
+* `Resultado Variação Faturamento`
+* `Resultado Variação Qntd Vendas`
+* `Resultado Variação Qnt de Bilhetes Vendidos`
+* `Resultado Variação Ticket Medio`
+
+### Rankings
+
+* `Rota Mais Vendida`
+* `Rota Mais Vendida TOP 1`
+* `Companhia Mais Vendida`
+* `Companhia TOP 1`
+
+---
+
+## 📊 Páginas do Dashboard
+
+### 🏠 Overview
+
+Página inicial utilizada como capa e ponto de navegação entre as análises.
+
+### 📈 Visão Geral
+
+Apresenta os principais indicadores do negócio:
+
+* Faturamento
+* Quantidade de vendas
+* Quantidade de bilhetes vendidos
+* Ticket médio
+* Comparação com período anterior
+* Evolução mensal do faturamento
+* Faturamento por rota
+* Faturamento por classe
+* Evolução do ticket médio
+* Participação por companhia aérea
+
+### 🛫 Rotas
+
+Análise do desempenho das rotas, incluindo:
+
+* Rota mais vendida
+* Faturamento por rota
+* Quantidade de vendas
+* Evolução mensal das vendas
+* Comparação entre diferentes rotas
+
+### ✈️ Companhias Aéreas
+
+Análise do desempenho das companhias:
+
+* Companhia líder em vendas
+* Faturamento por companhia
+* Evolução do ticket médio
+* Comparação de desempenho entre companhias
+
+---
+
+## 🎛️ Interatividade
+
+O dashboard possui recursos de interação para facilitar a exploração dos dados:
+
+* Segmentação por **Data**
+* Segmentação por **Companhia**
+* Segmentação por **Rota**
+* Navegação entre páginas
+* Botões de navegação
+* Interação entre visuais
+* KPIs comparativos
+* Filtros dinâmicos
+
+---
+
+## 💡 O que este projeto demonstra
+
+Este projeto demonstra conhecimentos práticos em:
+
+* **Power BI**
+* **DAX**
+* **Power Query**
+* **Modelagem dimensional**
+* **Star Schema**
+* **Análise temporal**
+* **Time Intelligence**
+* **Criação de KPIs**
+* **Data Visualization**
+* **Business Intelligence**
+* **Storytelling com dados**
+* **Análise de indicadores**
+* **Construção de dashboards interativos**
+
+---
+
+## 🛠️ Tecnologias e ferramentas
+
+| Tecnologia           | Aplicação                                       |
+| -------------------- | ----------------------------------------------- |
+| **Power BI Desktop** | Desenvolvimento do modelo e dashboard           |
+| **Power BI Service** | Publicação e disponibilização do dashboard      |
+| **DAX**              | Desenvolvimento das medidas e regras de negócio |
+| **Power Query**      | Tratamento e transformação dos dados            |
+| **Star Schema**      | Modelagem dimensional                           |
+| **IA Generativa**    | Apoio na concepção da identidade visual         |
+
+---
+
+## 🎨 Design
+
+A identidade visual do projeto foi desenvolvida com foco em **clareza, consistência e facilidade de leitura dos indicadores**.
+
+A concepção visual contou com apoio de **IA generativa**, utilizada para auxiliar na criação dos backgrounds em SVG utilizados nas páginas do dashboard.
+
+### Características do design
+
+* Paleta sóbria e consistente
+* Sidebar de navegação lateral
+* Cards de KPI padronizados
+* Hierarquia visual dos indicadores
+* Layout baseado em resolução **1920 × 1080**
+* Tipografia **Segoe UI**
+* Tema visual inspirado no **Fluent Design**
+
+### Paleta
+
+| Elemento | Cor       |
+| -------- | --------- |
+| Grafite  | `#222220` |
+| Bege     | `#E9E7E2` |
+| Verde    | `#3D6B58` |
+
+---
+
+## 📂 Estrutura do repositório
+
+```text
+Global-Flight-Data-BI/
+│
+├── assets/
+│   ├── background-cia-aerea.svg
+│   ├── background-rotas.svg
+│   ├── background-visao-geral-aerea.svg
+│   ├── capa-dashboard-bi.svg
+│
+├── Global_Flight_Data_BI.pbix
+│
+└── README.md
+```
+
+---
+
+## 🚀 Como utilizar
+
+### Opção 1 — Dashboard online
+
+Acesse diretamente o projeto publicado no Power BI Service:
+
+**[Abrir Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYWU5MDQ0ODctYWE2Yy00NTI3LTg4OGEtMDRhOWM5ODQ0NjgzIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)**
+
+### Opção 2 — Power BI Desktop
+
+1. Clone ou baixe este repositório.
+2. Abra o arquivo `Global_Flight_Data_BI.pbix` no **Power BI Desktop**.
+3. Explore o modelo de dados.
+4. Consulte as medidas DAX.
+5. Navegue pelas páginas do dashboard.
+6. Utilize os filtros e interações para explorar os dados.
+
+---
+
+## 👤 Autor
+
+### Gustavo Ferreira
+
+**Data Analytics | Business Intelligence**
+
+Profissional em transição e desenvolvimento de carreira na área de **Dados e Business Intelligence**, com experiência prática em análise de dados, indicadores, dashboards, SQL, automação e soluções orientadas a dados.
+
+📧 **E-mail:** [gustavoferreirabarbosa13@gmail.com](mailto:gustavoferreirabarbosa13@gmail.com)
+
+💼 **LinkedIn:** [linkedin.com/in/gustavo-ferreira-barbosa-16aaab229](https://www.linkedin.com/in/gustavo-ferreira-barbosa-16aaab229)
+
+🐙 **GitHub:** [@gustavoferreirabr](https://github.com/gustavoferreirabr)
+
+---
+
+## 📚 Sobre o projeto
+
+Este projeto foi desenvolvido para fins de **estudo, prática e construção de portfólio profissional**, com foco no desenvolvimento de competências aplicadas a **Business Intelligence, análise de dados e visualização de informações**.
+
+O objetivo é demonstrar, por meio de um projeto prático, a aplicação de conceitos de **modelagem de dados, tratamento, análise, DAX e visualização no Power BI**.
